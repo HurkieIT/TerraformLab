@@ -1,0 +1,5 @@
+environment_name = "local"
+
+
+# migration to cloud. add later
+# region          = "eu-east-1"
