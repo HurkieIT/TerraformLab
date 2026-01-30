@@ -1,12 +1,30 @@
 # Binnen deze file worden variables gedefineerd, zoals environments en regions waarin verschillende types of descriptions aan toegevoegd worden.
 
-variable "environment_name" {
-  description = "Name of the environment"
+variable "ubuntu_vm" {
+  description = "Ubuntu VM 24.04 LTS"
   type        = string
 }
 
-variable "region" {
-  description = "Optional region (future use)"
+variable "ubuntu_version" {
+  description = "Version of Ubuntu to use"
   type        = string
-  default     = null
+  default     = "24.04"
 }
+
+variable "cpu" {
+  description = "Number of CPU cores for the Ubuntu VM"
+  type        = number
+  default     = 2
+}
+
+variable "memory" {
+  description = "Amount of RAM in MB for the Ubuntu VM"
+  type        = number
+  default     = 4096
+}
+
+#variable "region" {
+#  description = "Optional region (future use)"
+#  type        = string
+#  default     = null
+#}
