@@ -1,0 +1,55 @@
+# ================================
+# OpenTofu / Terraform
+# ================================
+
+# State files (NOOIT committen)
+**/*.tfstate
+**/*.tfstate.*
+
+# Local configuration directories
+**/.terraform/
+
+# Variable definition files (kunnen secrets bevatten)
+terraform.tfvars
+**/terraform.tfvars
+
+# Crash logs
+crash.log
+crash.*.log
+
+# ================================
+# OpenTofu overrides
+# ================================
+
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ================================
+# Editor / OS rommel
+# ================================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ================================
+# Logs & tijdelijke files
+# ================================
+
+*.log
+*.tmp
+
+# ================================
+# (Optioneel) Generated artifacts
+# ================================
+
+# Local test output files (zoals ubuntu_vm.txt)
+*.txt
