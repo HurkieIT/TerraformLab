@@ -10,11 +10,6 @@ output "edition_used" {
   value       = var.edition
 }
 
-output "release_used" {
-  description = "The Windows release used in the local environment."
-  value       = var.windows_release
-}
-
 output "file_path" {
   description = "The path to the created Windows Server VM file."
   value       = local_file.windows_server_vm.filename
