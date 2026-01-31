@@ -5,7 +5,7 @@ variable "ubuntu_server_vm" {
   type        = string
 }
 
-variable "ubuntu_version" {
+variable "ubuntu_server_version" {
   description = "Version of Ubuntu to use"
   type        = string
   default     = "24.04"

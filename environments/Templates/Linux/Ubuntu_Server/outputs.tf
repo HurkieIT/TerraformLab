@@ -1,8 +1,8 @@
 # Output file voor de local environment
 
-output "ubuntu_server_version_used" {
+output "ubuntu_server_version" {
   description = "The Ubuntu version used in the local environment."
-  value = var.ubuntu_version
+  value = var.ubuntu_server_version
 }
 
 output "file_path" {
