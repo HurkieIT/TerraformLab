@@ -3,6 +3,10 @@
 - Git
 - OpenTofu (install via winget install --exact --id=OpenTofu.Tofu in Terminal)
 
+**Templates per use**
+- Linux (Ubuntu 24.04, Ubuntu Server 24.04)
+- Windows (Windows 11 22H2, Windows Server 2022)
+
 **Scope**
 Het leren van Infrastructure as Code als basis gebruiken om uiteindelijk Security based keuzes te maken voor de implementatiefases.
 
@@ -20,4 +24,5 @@ Het uiteindelijke leerdoel dat hiermee behaald gaat worden is er schaalbare infr
 - tofu plan (Hiermee controleer je de benodigde resources in het geval als je cloud implementeert, maar in de basis toon je hiermee welke basis je legt met je IaC)
 - tofu apply (Hiermee bouw je een omgeving en pas je eventuele aanpassingen vanuit de vorige 
 - tofu destroy (Hiermee breek je de testomgeving af)
+
 
