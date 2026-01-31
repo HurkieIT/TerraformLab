@@ -3,6 +3,7 @@
 variable "windows_vm" {
   description = "Name of the Windows Virtual machine"
   type        = string
+  default     = "windows_vm"
 }
 
 variable "windows_version" {
@@ -12,7 +13,7 @@ variable "windows_version" {
 }
 
 variable "windows_release" {
-  description = "Edition of Windows to use"
+  description = "Release of Windows to use (e.g., 22H2)"
   type        = string
   default     = "22H2"
 }

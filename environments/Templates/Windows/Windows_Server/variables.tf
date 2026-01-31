@@ -26,13 +26,13 @@ variable "cpu" {
 variable "memory" {
   description = "Amount of RAM in MB for the Windows VM"
   type        = number
-  default     = 8096
+  default     = 8196
 }
 
 variable "disk_size" {
   description = "Size of the disk in GB for the Windows VM"
   type        = number
-  default     = 64
+  default     = 500
 }
 
 

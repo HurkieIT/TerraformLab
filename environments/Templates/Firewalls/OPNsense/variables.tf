@@ -33,7 +33,7 @@ variable "disk_size" {
 #Elk object in de lijst bevat het type en de rol van de netwerk adapter.
 #Doormiddel van het gebruik van deze rollen is het in de toekomst eenvoudiger om de juiste netwerken toe te wijzen in de main.tf.
 
-variable network_adapters {
+variable "network_adapters" {
   description = "Number of network adapters for the OPNsense VM"
   type        = list(object({
     adapter_type = string

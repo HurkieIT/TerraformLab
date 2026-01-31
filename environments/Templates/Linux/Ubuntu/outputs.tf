@@ -9,3 +9,12 @@ output "file_path" {
   description = "The path to the created Ubuntu VM file."
   value = local_file.ubuntu_vm.filename
 }
+
+output "vm_resources" {
+  description = "The resources allocated for the Pfsense VM."
+  value = {
+    cpu    = var.cpu
+    memory = var.memory
+    disk   = var.disk_size
+  }
+}
