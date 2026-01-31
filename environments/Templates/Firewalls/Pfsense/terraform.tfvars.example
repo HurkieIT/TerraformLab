@@ -1,0 +1,4 @@
+pfsense_version = "CE 2.8.0"
+
+# migration to cloud. add later
+# region          = "eu-east-1"

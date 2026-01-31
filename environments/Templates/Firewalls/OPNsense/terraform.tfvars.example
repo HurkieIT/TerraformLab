@@ -1,0 +1,4 @@
+OPNsense_version = "27.4"
+
+# migration to cloud. add later
+# region          = "eu-east-1"
