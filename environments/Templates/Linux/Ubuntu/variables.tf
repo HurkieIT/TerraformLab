@@ -1,8 +1,9 @@
 # Binnen deze file worden variables gedefineerd, zoals environments en regions waarin verschillende types of descriptions aan toegevoegd worden.
 
 variable "ubuntu_vm" {
-  description = "Ubuntu VM 24.04 LTS"
+  description = "Name of the Ubuntu VM"
   type        = string
+  default     = "ubuntu_vm"
 }
 
 variable "ubuntu_version" {
@@ -24,11 +25,10 @@ variable "memory" {
 }
 
 variable "disk_size" {
-  description = "Size of the disk in GB for the Windows VM"
+  description = "Size of the disk in GB for the Ubuntu VM"
   type        = number
-  default     = 64
+  default     = 128
 }
-
 
 #variable "region" {
 #  description = "Optional region (future use)"

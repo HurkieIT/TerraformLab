@@ -2,8 +2,7 @@
 #Deze template is voor een Ubuntu machine uit te rollen in de test/productie omgeving.
 
 resource "local_file" "ubuntu_vm" {
-  filename = "ubuntu_vm.txt"
-  content = "This is an Ubuntu VM version ${var.ubuntu_version} with ${var.cpu} CPU cores and ${var.memory} MB RAM with ${var.disk_size} GB disk space. Network adapters: ${join(", ", [for a in var.network_adapters : "${a.role}(${a.adapter_type})"])}. Created by Terraform in the local environment."
+  filename = "${var.ubuntu_vm}.txt"
 
+  content = "This is an Ubuntu VM version ${var.ubuntu_version} with ${var.cpu} CPU cores, ${var.memory} MB RAM and ${var.disk_size} GB disk space. Created by Terraform in the local environment."
 }
-
