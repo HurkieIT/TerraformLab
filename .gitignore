@@ -7,7 +7,11 @@
 **/*.tfstate.*
 
 # Local configuration directories
+# OpenTofu / Terraform
 **/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+terraform.tfvars
 
 # Variable definition files (kunnen secrets bevatten)
 terraform.tfvars
