@@ -1,4 +1,5 @@
-#resource is de file die je kiest, met de naam en de content die je erin wilt zetten.
+#Binnen deze devop omgeving worden op basis van de gemaakte configuraties testomgevingen gerealisaeerd.
+#De functie hiervan is om alles dat in de uiteindelijke PO omgeving uitgerold wordt grondig getest te hebben.
 
 resource "local_file" "example" {
   filename = "example.txt"
