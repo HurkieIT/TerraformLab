@@ -1,5 +1,5 @@
 # Output file voor de local environment
 
-output "example_file" {
-  value = local_file.example.filename
+output "windows_server_version_used" {
+  value = local_file.windows_server_vm.filename
 }

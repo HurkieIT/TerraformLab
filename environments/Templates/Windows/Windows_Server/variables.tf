@@ -1,11 +1,11 @@
 # Binnen deze file worden variables gedefineerd, zoals environments en regions waarin verschillende types of descriptions aan toegevoegd worden.
 
-variable "windows_vm" {
+variable "windows_server_vm"{
   description = "Name of the Windows Virtual machine"
   type        = string
 }
 
-variable "windows_version" {
+variable "windows_server_version" {
   description = "Version of Windows to use"
   type        = string
   default     = "Server 2022"
