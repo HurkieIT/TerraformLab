@@ -1,0 +1,4 @@
+windows_version = "22H2"
+
+# migration to cloud. add later
+# region          = "eu-east-1"

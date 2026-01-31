@@ -23,6 +23,13 @@ variable "memory" {
   default     = 4096
 }
 
+variable "disk_size" {
+  description = "Size of the disk in GB for the Windows VM"
+  type        = number
+  default     = 64
+}
+
+
 #variable "region" {
 #  description = "Optional region (future use)"
 #  type        = string

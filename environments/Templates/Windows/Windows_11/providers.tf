@@ -1,12 +1,12 @@
 # Configuratiefile waarin Versies, providers en sources gedefinieerd worden voor de provider local.
 
 terraform {
-  required_version = "value"
+  required_version = ">= 1.0"
 
   required_providers {
     local = [{
       source  = "hashicorp/local"
-      version = "value"
+      version = "~> 2.0"
     }]
   }
 }

@@ -1,0 +1,4 @@
+ubuntu_server_version = "24.04"
+
+# migration to cloud. add later
+# region          = "eu-east-1"

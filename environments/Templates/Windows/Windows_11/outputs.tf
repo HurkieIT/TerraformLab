@@ -1,5 +1,7 @@
 # Output file voor de local environment
 
-output "example_file" {
-  value = local_file.example.filename
+output "windows_vm_file_path" {
+  description = "The path to the created Windows VM file."
+  value       = local_file.windows_vm.filename
 }
+
