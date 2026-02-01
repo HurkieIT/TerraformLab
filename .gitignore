@@ -13,6 +13,11 @@
 **/*.tfstate.*
 terraform.tfvars
 
+# Terraform / OpenTofu secrets
+**/secrets/
+*.tfvars
+*.auto.tfvars
+
 # Variable definition files (kunnen secrets bevatten)
 terraform.tfvars
 **/terraform.tfvars
@@ -43,6 +48,11 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+
+#Proxmox
+proxmoxer_config.py
+secrets
+proxmox.auto.tfvars
 
 # ================================
 # Logs & tijdelijke files

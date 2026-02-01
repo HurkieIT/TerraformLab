@@ -1,5 +1,5 @@
 # Output file voor de local environment
 
-output "example_file" {
-  value = local_file.example.filename
+output "ubuntu_vm_name" {
+  value = module.ubuntu_server.vm_name
 }
