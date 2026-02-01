@@ -5,21 +5,26 @@ resource "proxmox_vm_qemu" "vm" {
   name        = var.ubuntu_server_vm.name
   target_node = var.ubuntu_server_vm.target_node
 
-  clone   = var.ubuntu_server_vm.template
-  cores   = var.ubuntu_server_vm.cores
-  sockets = var.ubuntu_server_vm.sockets
-  memory  = var.ubuntu_server_vm.memory
+  clone  = var.ubuntu_server_vm.template
+  memory = var.ubuntu_server_vm.memory
 
-  disk {
-    size         = "${var.ubuntu_server_vm.disk_gb}G"
-    type         = "scsi"
-    storage      = var.ubuntu_server_vm.storage
-    storage_type = "lvm"
-    iothread     = 1
+  cpu {
+    cores   = var.ubuntu_server_vm.cores
+    sockets = var.ubuntu_server_vm.sockets
   }
 
+    disk {
+      slot     = "scsi0"
+      type     = "disk"
+      storage  = var.ubuntu_server_vm.storage
+      size     = "${var.ubuntu_server_vm.disk_gb}G"
+      iothread = true
+    }
+
   network {
+    id     = 0
     model  = "virtio"
     bridge = var.ubuntu_server_vm.bridge
   }
 }
+
