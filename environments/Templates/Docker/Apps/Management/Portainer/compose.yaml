@@ -1,0 +1,9 @@
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer_management
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+    volumes:
+      - portainer_data:/data
