@@ -1,33 +1,26 @@
 # Binnen deze file worden variables gedefineerd, zoals environments en regions waarin verschillende types of descriptions aan toegevoegd worden.
 
 variable "ubuntu_vm" {
-  description = "Name of the Ubuntu VM"
-  type        = string
-  default     = "ubuntu_vm"
+  description = "Ubuntu VM settings (clone-based)"
+  type = object({
+    name        = string
+    target_node = string
+
+    template = string
+    bridge   = string
+    storage  = string
+    disk_gb  = number
+
+    cores   = number
+    sockets = number
+    memory  = number
+  })
 }
 
 variable "ubuntu_version" {
-  description = "Version of Ubuntu to use"
+  description = "Version of the Ubuntu VM"
   type        = string
   default     = "24.04"
-}
-
-variable "cpu" {
-  description = "Number of CPU cores for the Ubuntu VM"
-  type        = number
-  default     = 2
-}
-
-variable "memory" {
-  description = "Amount of RAM in MB for the Ubuntu VM"
-  type        = number
-  default     = 4096
-}
-
-variable "disk_size" {
-  description = "Size of the disk in GB for the Ubuntu VM"
-  type        = number
-  default     = 128
 }
 
 #variable "region" {

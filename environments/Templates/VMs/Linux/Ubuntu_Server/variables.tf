@@ -20,7 +20,7 @@ variable "ubuntu_server_vm" {
 variable "ubuntu_server_version" {
   description = "Version of the Ubuntu Server"
   type        = string
-  default     = "22.04"
+  default     = "24.04"
 }
 
 #variable "region" {
