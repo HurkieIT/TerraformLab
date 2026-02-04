@@ -1,0 +1,1 @@
+Binnen Local worden vooral de example files gestored voor dit project, dit zijn ook de files die steeds aangepast worden per project of per nieuwe toevoeging voor Terraforming met OpenTofu
