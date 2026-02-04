@@ -1,0 +1,4 @@
+docker compose \
+  -f Web/ReverseProxy/Nginx/compose.yml \
+  -f Web/WebSer/HelloWorld/compose.yml \
+  up -d
