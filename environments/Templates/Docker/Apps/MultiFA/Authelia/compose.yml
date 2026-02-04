@@ -1,0 +1,9 @@
+services:
+ Authelia:
+    image: authelia/authelia:latest
+    container_name: authelia_multifa
+    restart: unless-stopped
+    ports:
+      - "9091:9091"
+    volumes:
+      - authelia_data:/config

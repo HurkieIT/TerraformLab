@@ -1,0 +1,9 @@
+services:
+ authentik:
+    image: goauthentik/authentik:latest
+    container_name: authentik_multifa
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - authentik_data:/var/lib/authentik

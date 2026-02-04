@@ -1,0 +1,10 @@
+services:
+ traefik:
+    image: traefik:latest
+    container_name: traefik_reverseproxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - traefik_data:/etc/traefik

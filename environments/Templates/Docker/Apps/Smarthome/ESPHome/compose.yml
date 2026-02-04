@@ -1,0 +1,9 @@
+services:
+  esphome:
+    image: esphome/esphome:latest
+    container_name: esphome_smarthome
+    restart: unless-stopped
+    ports:
+      - "6052:6052"
+    volumes:
+      - esphome_data:/config

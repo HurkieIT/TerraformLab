@@ -1,0 +1,17 @@
+services:
+  nextcloud:
+    image: nextcloud:latest
+    container_name: nextcloud_cloud
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - nextcloud_data:/var/www/html
+      - nextcloud_db:/var/lib/mysql
+      - nextcloud_config:/var/www/html/config
+      - nextcloud_apps:/var/www/html/apps
+      - nextcloud_datafiles:/var/www/html/data
+      - nextcloud_themes:/var/www/html/themes
+      - nextcloud_custom:/var/www/html/custom
+      - nextcloud_ssl:/etc/ssl
+      - nextcloud_logs:/var/log/apache2

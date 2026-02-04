@@ -1,0 +1,9 @@
+services:
+  httpd:
+    image: httpd:latest
+    container_name: httpd_webser
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - httpd_data:/usr/local/apache2/htdocs/
