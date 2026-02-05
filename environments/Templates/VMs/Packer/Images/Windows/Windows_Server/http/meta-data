@@ -1,2 +1,2 @@
-instance-id: ubuntu-packer
-local-hostname: ubuntu=template
+instance-id: windowsserver-packer
+local-hostname: windowsserver=template
