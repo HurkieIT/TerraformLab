@@ -1,9 +1,34 @@
 #resource is de file die je kiest, met de naam en de content die je erin wilt zetten.
 
-resource "local_file" "windows_server_vm" { 
-  filename = "${var.windows_server_vm}.txt"
+resource "proxmox_vm_qemu" "vm" {
+  name        = var.windows_server_vm.name
+  target_node = var.windows_server_vm.target_node
 
-  content = "This is a Windows Server VM version ${var.windows_server_version} with ${var.cpu} CPU cores and ${var.memory} MB RAM with ${var.disk_size} GB disk space. Created by Terraform in the local environment."
+  clone  = var.windows_server_vm.template
+  memory = var.windows_server_vm.memory
+  agent  = 1
+  bios   = "ovmf"
 
+  cpu {
+    cores   = var.windows_server_vm.cores
+    sockets = var.windows_server_vm.sockets
+    type    = "host"
+  }
+
+  disk {
+    slot     = "scsi0"
+    type     = "disk"
+    storage  = var.windows_server_vm.storage
+    size     = "${var.windows_server_vm.disk_gb}G"
+    iothread = true
+  }
+
+  network {
+    id     = 0
+    model  = "virtio"
+    bridge = var.windows_server_vm.bridge
+  }
 }
+
+
 

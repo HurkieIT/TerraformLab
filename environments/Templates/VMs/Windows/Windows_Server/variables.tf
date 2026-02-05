@@ -1,38 +1,25 @@
 # Binnen deze file worden variables gedefineerd, zoals environments en regions waarin verschillende types of descriptions aan toegevoegd worden.
 
-variable "windows_server_vm"{
-  description = "Name of the Windows Virtual machine"
-  type        = string
-}
+variable "windows_server_vm" {
+  description = "Windows Server VM settings (clone-based)"
+  type = object({
+    name        = string
+    target_node = string
 
+    template = string
+    bridge  = string
+    storage = string
+    disk_gb = number
+
+    cores   = number
+    sockets = number
+    memory  = number
+  })
+}
 variable "windows_server_version" {
-  description = "Version of Windows to use"
+  description = "Version of the Windows Server"
   type        = string
-  default     = "Server 2022"
-}
-
-variable "edition" {
-  description = "Edition of Windows to use"
-  type        = string
-  default     = "Standard"
-}
-
-variable "cpu" {
-  description = "Number of CPU cores for the Windows VM"
-  type        = number
-  default     = 4
-}
-
-variable "memory" {
-  description = "Amount of RAM in MB for the Windows VM"
-  type        = number
-  default     = 8196
-}
-
-variable "disk_size" {
-  description = "Size of the disk in GB for the Windows VM"
-  type        = number
-  default     = 500
+  default     = "2022"
 }
 
 
