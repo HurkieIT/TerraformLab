@@ -1,0 +1,20 @@
+#cloud-config
+autoinstall:
+  version: 1
+  identity:
+    hostname: ubuntu-template
+    username: packer
+    password: "$6$rounds=4096$example$yqXx8JkS8kq1l0h4wqR7Q8xj9QG7dQ1nXzv8iS6b1gQk9uOqJ3rj1y1o3c1Kz6Q7p9yH8yq2JwLzRkW0/"
+  ssh:
+    install-server: true
+    allow-pw: true
+  locale: en_US
+  keyboard:
+    layout: us
+  storage:
+    layout:
+      name: direct
+  packages:
+    - qemu-guest-agent
+  late-commands:
+    - curtin in-target --target=/target -- systemctl enable qemu-guest-agent
