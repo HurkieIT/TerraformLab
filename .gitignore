@@ -57,4 +57,3 @@ $RECYCLE.BIN/
 
 # Packer secrets/vars
 *.pkrvars.hcl
-!*.pkrvars.hcl.example
