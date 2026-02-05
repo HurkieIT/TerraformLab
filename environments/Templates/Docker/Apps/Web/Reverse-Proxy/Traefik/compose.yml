@@ -1,10 +1,21 @@
 services:
- traefik:
-    image: traefik:latest
+  traefik:
+    image: traefik:v3.1
     container_name: traefik_reverseproxy
     restart: unless-stopped
     ports:
       - "80:80"
       - "443:443"
+    command:
+      - --api.dashboard=true
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
     volumes:
-      - traefik_data:/etc/traefik
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

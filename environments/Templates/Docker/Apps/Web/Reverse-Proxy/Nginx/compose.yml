@@ -1,11 +1,19 @@
 services:
   nginx:
-    image: nginx:latest
+    image: nginx:1.26-alpine
     container_name: nginx_reverseproxy
     restart: unless-stopped
     ports:
       - "80:80"
       - "443:443"
+    environment:
+      - TZ=Europe/Amsterdam
     volumes:
-      - nginx_data:/etc/nginx/conf.d
-      - nginx_html:/usr/share/nginx/html
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/html:/usr/share/nginx/html:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
