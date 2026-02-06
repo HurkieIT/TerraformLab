@@ -1,2 +1,2 @@
-instance-id: ubuntu-packer
-local-hostname: ubuntu=template
+instance-id: ubuntu-desktop-packer
+local-hostname: ubuntu-desktop-template

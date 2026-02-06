@@ -1,2 +1,2 @@
-instance-id: ubuntu-packer
-local-hostname: ubuntu-template
+instance-id: ubuntu-server-packer
+local-hostname: ubuntu-server-template

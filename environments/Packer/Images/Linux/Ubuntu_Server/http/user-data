@@ -2,9 +2,9 @@
 autoinstall:
   version: 1
   identity:
-    hostname: ubuntu-template
+    hostname: ubuntu-server-template
     username: packer
-    password: "CHANGE_ME_HASHED"
+    password: "$6$rounds=4096$REPLACE_WITH_REAL_HASH"
   ssh:
     install-server: true
     allow-pw: true
