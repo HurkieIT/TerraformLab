@@ -15,12 +15,6 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocola
 - Ansible voor Containerisatie om on demand servers inclusief services uit te rollen (https://docs.ansible.com/#get_started)
 - Packer om Golden Images te maken waar de templates met OpenTofu op voort bouwt
 
-**Workflow**
-Packer (Golden Image) -> OpenTofu (schaalt naar de requirements) -> Ansible (bied resources aan vanuit Docker/Kubernetes)
-
-- Future plans
-- 
-
 **Templates per use**
 - Linux (Ubuntu 24.04, Ubuntu Server 24.04)
 - Windows (Windows 11 22H2, Windows Server 2022)
@@ -49,9 +43,11 @@ Het uiteindelijke leerdoel dat hiermee behaald gaat worden is er schaalbare infr
 
 - packer init . (Hiermee initieer je de packer omgeving)
 - packer validate . (hiermee controleer je gehele omgeving
+- packer apply . (hiermee pas je alles toe en gebruikt packer de golden image
 
 **Flowchart en Domeinbeschrijving**
 <img width="821" height="641" alt="Domeinschets drawio" src="https://github.com/user-attachments/assets/dee04d1f-b3a5-4347-944c-cef5c763b3dc" />
+
 
 
 
