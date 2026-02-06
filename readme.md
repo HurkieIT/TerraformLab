@@ -12,7 +12,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocola
 
 - Future Tools
 - Kubernetes
-- Ansible voor Containerisatie om on demand servers inclusief services uit te rollen
+- Ansible voor Containerisatie om on demand servers inclusief services uit te rollen (https://docs.ansible.com/#get_started)
 - Packer om Golden Images te maken waar de templates met OpenTofu op voort bouwt
 
 **Workflow**
@@ -49,6 +49,7 @@ Het uiteindelijke leerdoel dat hiermee behaald gaat worden is er schaalbare infr
 
 - packer init . (Hiermee initieer je de packer omgeving)
 - packer validate . (hiermee controleer je gehele omgeving
+
 
 
 
