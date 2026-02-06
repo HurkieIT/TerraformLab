@@ -47,6 +47,11 @@ Het uiteindelijke leerdoel dat hiermee behaald gaat worden is er schaalbare infr
 - tofu apply (Hiermee bouw je een omgeving en pas je eventuele aanpassingen vanuit de vorige 
 - tofu destroy (Hiermee breek je de testomgeving af)
 
+- packer init . (Hiermee initieer je de packer omgeving)
+- packer validate . (hiermee controleer je gehele omgeving
+
+
+
 
 
 
