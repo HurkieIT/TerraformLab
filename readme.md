@@ -50,6 +50,10 @@ Het uiteindelijke leerdoel dat hiermee behaald gaat worden is er schaalbare infr
 - packer init . (Hiermee initieer je de packer omgeving)
 - packer validate . (hiermee controleer je gehele omgeving
 
+**Flowchart en Domeinbeschrijving**
+<img width="821" height="641" alt="Domeinschets drawio" src="https://github.com/user-attachments/assets/dee04d1f-b3a5-4347-944c-cef5c763b3dc" />
+
+
 
 
 
